@@ -50,3 +50,24 @@ document.querySelectorAll('.portfolio-item, .product-card').forEach(item => {
     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(item);
 });
+
+// Animasi Scroll Halus
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Menghitung offset navbar (supaya judul section gak ketutupan menu)
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
