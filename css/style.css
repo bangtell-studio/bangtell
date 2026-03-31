@@ -71,7 +71,7 @@ html {
         top: 0;
         right: -100%; /* Sembunyi di samping kanan */
         width: 45%;
-        height: 100vh;
+        height: auto;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px); /* Efek kaca transparan biar makin mewah */
         flex-direction: column;
