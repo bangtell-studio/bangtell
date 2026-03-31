@@ -68,18 +68,33 @@ html {
 
     .nav-links {
         position: fixed;
-        top: 0;
-        right: -100%; /* Sembunyi di samping kanan */
-        width: 45%;
-        height: auto;
+        /* Mengatur jarak dari atas dan kanan agar terlihat melayang */
+        top: 80px; 
+        right: -100%; 
+        
+        /* Lebar seperempat layar */
+        width: 45%; 
+        
+        /* TINGGI OTOMATIS: Mengikuti jumlah menu */
+        height: auto; 
+        
+        /* Padding agar ada ruang di dalam kotak menu */
+        padding: 30px 0; 
+        
         background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px); /* Efek kaca transparan biar makin mewah */
+        backdrop-filter: blur(10px);
+        
+        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 2.5rem;
+        gap: 2rem;
+        
+        /* Membuat sudut melengkung agar lebih estetik */
+        border-radius: 20px 0 0 20px; 
+        
         transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+        box-shadow: -10px 10px 30px rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.05);
     }
 
     .nav-links.active {
