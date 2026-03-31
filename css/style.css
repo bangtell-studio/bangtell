@@ -117,5 +117,73 @@ body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-hei
     color: #EE4D2D; /* Orange Shopee */
 }
 
+/* ===== Contact Section ===== */
+.contact {
+    padding: 100px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Supaya rapi saat dibuka di HP (numpuk ke bawah) */
+    margin-top: 40px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    border-radius: 50px; /* Bentuk kapsul yang modern */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Warna Spesifik Tombol */
+.contact-btn.shopee {
+    background: #EE4D2D;
+    color: #fff;
+}
+
+.contact-btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+.contact-btn.email {
+    background: #000;
+    color: #fff;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 576px) {
+    .contact-links {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    .contact-btn {
+        justify-content: center;
+    }
+}
+
 /* Footer */
 .footer { padding: 40px 0; text-align: center; border-top: 1px solid #eee; color: #999; }
