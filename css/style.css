@@ -76,7 +76,7 @@ html {
         width: 45%; 
         
         /* TINGGI OTOMATIS: Mengikuti jumlah menu */
-        height: 100vh; 
+        height: auto; 
         
         /* Padding agar ada ruang di dalam kotak menu */
         padding: 30px 0; 
@@ -309,6 +309,22 @@ html {
         justify-content: center;
     }
 }
+
+
+/* Styling awal sebelum konten muncul */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform; /* Membantu performa browser */
+}
+
+/* Munculkan konten saat class 'is-visible' ditambahkan oleh JS */
+.reveal-item.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 
 /* Footer */
 .footer { padding: 40px 0; text-align: center; border-top: 1px solid #eee; color: #999; }
