@@ -7,11 +7,33 @@ body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-hei
 
 /* Mengatur ukuran logo di navbar */
 .nav-logo {
-    height: 40px; /* Atur tinggi logo sesuai selera (biasanya 40-50px) */
+    height: 80px; /* Atur tinggi logo sesuai selera (biasanya 40-50px) */
     width: auto;  /* Lebar otomatis menyesuaikan agar tidak gepeng */
     display: block;
     transition: transform 0.3s ease;
 }
+
+/* Efek Hover Ganti Warna Hitam */
+.nav-links a:hover {
+    color: #000; /* Berubah jadi hitam pekat */
+}
+
+/* Bonus: Tambah garis bawah tipis pas di-hover biar makin cakep */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 
 .logo:hover .nav-logo {
     transform: scale(1.05); /* Sedikit efek zoom saat logo di-hover */
@@ -30,8 +52,13 @@ body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-hei
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; }
 .logo span { color: #EE4D2D; }
-.nav-links { display: flex; gap: 20px; list-style: none; }
-.nav-links a { text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem; }
+.nav-links { display: flex; gap: 4rem; list-style: none; }
+.nav-links a { 
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #777; /* Warna awal agak abu supaya pas hover hitamnya 'nendang' */
+    transition: all 0.3s ease; /* Biar transisi warnanya halus */
+    position: relative; }
 
 /* Hero */
 .hero { padding: 100px 0; text-align: center; background: #fafafa; }
