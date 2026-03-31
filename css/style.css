@@ -76,7 +76,7 @@ html {
         width: 45%; 
         
         /* TINGGI OTOMATIS: Mengikuti jumlah menu */
-        height: auto; 
+        height: 100vh; 
         
         /* Padding agar ada ruang di dalam kotak menu */
         padding: 30px 0; 
