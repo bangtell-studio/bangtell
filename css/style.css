@@ -137,11 +137,88 @@ html {
 
 
 /* Hero */
-.hero { padding: 100px 0; text-align: center; background: #fafafa; }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero p { color: #666; margin-bottom: 30px; }
-.btn { display: inline-block; padding: 12px 30px; background: #000; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 5px; }
-.btn-outline { background: transparent; border: 2px solid #000; color: #000; }
+.hero {
+    position: relative;
+    min-height: 85vh; /* Tinggi container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+    
+    /* MODAL UTAMA: Overlay Hitam 70% + Background Image */
+    /* Ganti 'images/hero-background.webp' dengan nama file gambarmu */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('images/hero-background.webp');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Bikin efek paralaks pas di-scroll */
+    color: #ffffff; /* Pastikan semua teks di dalam hero jadi putih */
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Ukuran besar biar mantap */
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.2;
+}
+.hero p { 
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9); /* Putih agak transparan biar elegan */
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Wrapper Tombol */
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn { 
+display: inline-block;
+    padding: 14px 32px;
+    background-color: #ffffff; /* Tombol jadi putih */
+    color: #000000; /* Tulisan di dalam tombol jadi hitam */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;    
+}
+
+.btn:hover {
+    background-color: #eeeeee;
+    transform: translateY(-3px); /* Efek melayang dikit pas di-hover */
+}
+
+.btn-outline { 
+    background-color: transparent;
+    color: #ffffff; /* Tulisan putih */
+    border: 2px solid #ffffff; /* Garis pinggir putih */
+}
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: #000000; /* Pas di-hover tulisan jadi hitam */
+}
+
+/* Responsif buat HP */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-btns {
+        flex-direction: column; /* Tombol tumpuk ke bawah di HP */
+        align-items: center;
+    }
+}
 
 /* Portfolio - RASIO 3:4 */
 .portfolio { padding: 80px 0; }
