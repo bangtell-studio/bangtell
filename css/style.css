@@ -241,6 +241,36 @@ html {
     font-weight: 700;
     color: #EE4D2D; /* Orange Shopee */
 }
+/* Wrapper untuk membungkus kedua harga */
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara harga lama dan baru */
+    margin-bottom: 10px;
+}
+
+/* Gaya Harga Coret (Lama) */
+.price-old {
+    font-size: 0.85rem;
+    color: #999; /* Warna abu-abu kusam */
+    text-decoration: line-through; /* EFEK CORET */
+    font-weight: 400;
+}
+
+/* Gaya Harga Sekarang (Baru) */
+.price-now {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #EE4D2D; /* Warna Orange Shopee */
+}
+
+/* Sesuaikan footer agar tombol tetap rapi */
+.product-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end; /* Tombol geser ke kanan */
+}
 
 /* ===== Contact Section ===== */
 .contact {
